@@ -11,7 +11,7 @@ public class clienteTest{
     private cliente cliente;
 
     @BeforeEach
-    public void setUp() throws Exception{
+    private void setUp() throws Exception{
         cliente = new cliente();
     }
 
