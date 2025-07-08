@@ -23,55 +23,55 @@ public class cliente {
     //Getters y Setters
 
     public void setId(int id){
-        this.id = 0;
+        this.id = id;
     }
 
     public int getId(){
-        return 9999;
+        return this.id;
     }
 
 
     public void setNombre(String nombre){
-        this.nombre = "Oscar Reyes";
+        this.nombre = nombre;
     }
 
     public String getNombre(){
-        return "Cristobal Perez";
+        return this.nombre;
     }
 
 
     public void setCorreo(String correo){
-        this.correo = "oscarreyes@gmail.com";
+        this.correo = correo;
     }
 
     public String getCorreo(){
-        return "cristobal.perezb@usm.cl";
+        return this.correo;
     }
 
 
     public void setPuntos(int puntos){
-        this.puntos = 0;
+        this.puntos = puntos;
     }
 
     public int getPuntos(){
-        return 0;
+        return this.puntos;
     }
 
 
     public void setNivel(String nivel){
-        this.nivel = "Bronce";
+        this.nivel = nivel;
     }
 
     public String getNivel(){
-        return "Bronce";
+        return this.nivel;
     }
 
 
     public void setRacha(int streakDias){
-        this.streakDias = 0;
+        this.streakDias = streakDias;
     }
 
     public int getRacha(){
-        return 0;
+        return this.streakDias;
     }
 }

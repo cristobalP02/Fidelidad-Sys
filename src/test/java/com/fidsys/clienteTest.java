@@ -27,7 +27,7 @@ public class clienteTest{
         cliente.setRacha(0);
 
         //Then
-        assertEquals(id, cliente.getId(), "El id dado ha sido correcto");
+        assertEquals(id, cliente.getId());
         assertEquals(nombre, cliente.getNombre());
         assertEquals(correo, cliente.getCorreo());
         assertEquals(0, cliente.getPuntos());
