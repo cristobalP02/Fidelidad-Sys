@@ -94,8 +94,12 @@ public class cliente {
     private void verificarNivel(){
         int puntosActuales = this.getPuntos();
 
-        if(puntosActuales >= 500){
+        if(puntosActuales >= 500 && puntosActuales < 1500){
             this.setNivel("Plata");
+        }
+
+        else{
+            this.setNivel("Bronce");
         }
     }
 }

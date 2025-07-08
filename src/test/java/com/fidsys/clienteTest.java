@@ -55,7 +55,7 @@ public class clienteTest{
 
 
     @Test
-    public void subirNivelBronce() throws Exception{
+    public void subirNivelPlata() throws Exception{
         //Given
         cliente.setPuntos(0);
         cliente.setNivel("Bronce");
