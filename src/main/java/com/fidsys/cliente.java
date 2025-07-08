@@ -78,12 +78,24 @@ public class cliente {
     }
 
 
-    //Sube de nivel al cliente
+    //Sube de puntos al cliente
     public void addPuntos(int puntos){
         int puntosActuales = this.getPuntos();
 
         int puntosNuevos = puntosActuales + puntos;
 
         this.setPuntos(puntosNuevos);
+
+        verificarNivel();
+    }
+
+
+    //Sube de nivel al cliente si tiene los puntos necesarios
+    private void verificarNivel(){
+        int puntosActuales = this.getPuntos();
+
+        if(puntosActuales >= 500){
+            this.setNivel("Plata");
+        }
     }
 }
