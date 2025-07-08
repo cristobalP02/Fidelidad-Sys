@@ -41,7 +41,9 @@ public class cliente {
 
 
     public void setCorreo(String correo){
-        this.correo = correo;
+        if(correo.contains("@")){
+            this.correo = correo;
+        }
     }
 
     public String getCorreo(){

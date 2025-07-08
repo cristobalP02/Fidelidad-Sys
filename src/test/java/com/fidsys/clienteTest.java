@@ -34,4 +34,28 @@ public class clienteTest{
         assertEquals("Bronce", cliente.getNivel());
         assertEquals(0, cliente.getRacha());
     }
+
+    @Test
+    public void correoErroneo(){
+        //Given
+        cliente = new cliente();
+
+        //When
+        String correo = "cristobal.gmail.cl";
+
+        //Then
+        cliente.setCorreo(correo);
+        assertEquals(correo, cliente.getCorreo());
+    }
+
+    /*
+     * @Test
+    public void correoErroneo(){
+        //Given
+        //When
+        //Then
+    }
+
+    IDS y correos iguales iguales
+     */
 }
