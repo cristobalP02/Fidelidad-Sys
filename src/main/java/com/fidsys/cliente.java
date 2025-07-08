@@ -16,9 +16,6 @@ public class cliente {
     //Nivel actual del cliente (Bronce, Plata, Oro)
     private String nivel;
 
-    //Racha de dias actual del cliente
-    private int streakDias;
-
 
     //Getters y Setters
 
@@ -69,15 +66,6 @@ public class cliente {
     }
 
 
-    public void setRacha(int streakDias){
-        this.streakDias = streakDias;
-    }
-
-    public int getRacha(){
-        return this.streakDias;
-    }
-
-
     //Sube de puntos al cliente
     public void addPuntos(int puntos){
         int puntosActuales = this.getPuntos();
@@ -96,6 +84,14 @@ public class cliente {
 
         if(puntosActuales >= 500 && puntosActuales < 1500){
             this.setNivel("Plata");
+        }
+
+        else if(puntosActuales >= 1500 && puntosActuales < 3000){
+            this.setNivel("Oro");
+        }
+
+        else if(puntosActuales >= 3000){
+            this.setNivel("Platino");
         }
 
         else{
