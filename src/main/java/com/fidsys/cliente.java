@@ -27,7 +27,7 @@ public class cliente {
     }
 
     public int getId(){
-        return 0;
+        return 9999;
     }
 
 
@@ -36,7 +36,7 @@ public class cliente {
     }
 
     public String getNombre(){
-        return "Oscar Reyes";
+        return "Cristobal Perez";
     }
 
 
@@ -45,7 +45,7 @@ public class cliente {
     }
 
     public String getCorreo(){
-        return "oscarreyes@gmail.com";
+        return "cristobal.perezb@usm.cl";
     }
 
 
