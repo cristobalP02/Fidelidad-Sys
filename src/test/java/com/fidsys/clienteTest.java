@@ -1,18 +1,23 @@
 package com.fidsys;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class clienteTest{
 
     private cliente cliente;
 
-    @Test
-    public void crear_Cliente(){
-        //Given
+    @BeforeEach
+    public void setUp() throws Exception{
         cliente = new cliente();
+    }
 
+    @Test
+    public void crear_Cliente() throws Exception{
+        //Given
         int id = 9999;
         String nombre = "Cristobal Perez";
         String correo = "cristobal.perezb@usm.cl";
@@ -35,18 +40,33 @@ public class clienteTest{
         assertEquals(0, cliente.getRacha());
     }
 
-    @Test
-    public void correoErroneo(){
-        //Given
-        cliente = new cliente();
 
-        //When
+    @Test
+    public void correoErroneo() throws Exception{
+        //Given
         String correo = "cristobal.gmail.cl";
 
-        //Then
+        //When
         cliente.setCorreo(correo);
-        assertEquals(correo, cliente.getCorreo());
+
+        //Then
+        assertEquals(null, cliente.getCorreo(), "El resultado ha sido erroneo, ha asignado el correo, pese a que no tiene @");
     }
+
+
+    @Test
+    public void subirNivelBronce() throws Exception{
+        //Given
+        cliente.setPuntos(0);
+        cliente.setNivel("Bronce");
+        
+        //When
+        cliente.addPuntos(500);
+
+        //Then
+        assertEquals("Plata", cliente.getNivel(), "No subio de nivel a Plata, pero debería");
+    }
+
 
     /*
      * @Test
@@ -56,6 +76,6 @@ public class clienteTest{
         //Then
     }
 
-    IDS y correos iguales iguales
+    
      */
 }

@@ -76,4 +76,14 @@ public class cliente {
     public int getRacha(){
         return this.streakDias;
     }
+
+
+    //Sube de nivel al cliente
+    public void addPuntos(int puntos){
+        int puntosActuales = this.getPuntos();
+
+        int puntosNuevos = puntosActuales + puntos;
+
+        this.setPuntos(puntosNuevos);
+    }
 }
